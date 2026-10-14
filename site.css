@@ -60,3 +60,50 @@ footer { max-width: 720px; margin: 56px auto 0; padding: 18px 16px max(36px, env
 footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
 
 footer .legal { flex-basis: 100%; margin: 12px 0 0; font-size: 0.8rem; line-height: 1.5; opacity: 0.8; }
+
+/* Landing page (Oct 13): hero with a device shot, three benefits, screenshots, pricing */
+.landing { max-width: 1040px; }
+.top { max-width: 1040px; }
+footer { max-width: 1040px; }
+.small { font-size: 15px; color: var(--ink-soft); }
+.center { text-align: center; }
+.hero2 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding: 40px 0 16px; }
+.hero2 h1 { font-size: clamp(34px, 5.4vw, 52px); line-height: 1.08; margin: 18px 0 14px; letter-spacing: -.015em; }
+.hero2 p { font-size: clamp(18px, 2.4vw, 20px); color: var(--ink-soft); margin: 0 0 12px; max-width: 32em; }
+.hero2 .badge { margin-top: 0; }
+.hero-shot { margin: 0; justify-self: center; }
+.hero-shot img, .gallery img { width: 100%; max-width: 300px; height: auto; display: block; border-radius: 34px; border: 6px solid var(--line); box-shadow: 0 18px 40px rgba(90, 50, 20, .18); background: var(--surface); }
+.benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 44px 0 8px; }
+.benefit { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.benefit h2 { font-size: 20px; margin: 12px 0 6px; }
+.benefit p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+.stitch { display: flex; gap: 6px; }
+.stitch i { width: 22px; height: 22px; border-radius: 4px; position: relative; background: var(--accent-soft); }
+.stitch i::before, .stitch i::after { content: ""; position: absolute; left: 3px; right: 3px; top: 10px; height: 3px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
+.stitch i::after { transform: rotate(-45deg); }
+.stitch i.todo { background: transparent; border: 1px dashed var(--line); }
+.stitch i.todo::before, .stitch i.todo::after { background: var(--line); }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 48px 0 8px; justify-items: center; }
+.gallery figure { margin: 0; text-align: center; }
+.gallery figcaption { margin-top: 12px; font-weight: 700; font-family: ui-rounded, -apple-system, sans-serif; }
+.ipad { margin: 48px 0 0; text-align: center; }
+.ipad img { width: 100%; max-width: 620px; height: auto; border-radius: 26px; border: 6px solid var(--line); box-shadow: 0 18px 40px rgba(90, 50, 20, .16); }
+.ipad p { color: var(--ink-soft); margin: 14px auto 0; max-width: 34em; }
+.pricing { margin: 56px 0 0; }
+.pricing h2, .soon h2 { text-align: center; font-size: clamp(26px, 4vw, 32px); margin: 0 0 18px; }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.plan h3 { margin: 0; font-size: 18px; }
+.plan .price { font-size: 30px; font-weight: 800; color: var(--ink); margin: 6px 0 8px; font-family: ui-rounded, -apple-system, sans-serif; }
+.plan .price span { font-size: 16px; font-weight: 600; color: var(--ink-soft); }
+.plan p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+.plan .price + p { margin-top: 0; }
+.plan.featured { border: 2px solid var(--accent); }
+.soon { margin: 48px 0 0; text-align: center; }
+.soon p { color: var(--ink-soft); max-width: 34em; margin: 0 auto; }
+@media (max-width: 820px) {
+  .hero2 { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .benefits, .plans { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr; }
+  .gallery img { max-width: 260px; }
+}
